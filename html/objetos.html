@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JavaScript</title>
+</head>
+<body>
+
+    <h1 id="hotel"></h1>
+    <p id="rooms"></p>
+    
+    <script>
+        // Notação Literal
+        let hotel = {
+            name: 'Plaza',
+            rooms: 150,
+            booked: 50,
+            checkAvailability: function() {
+                return this.rooms - this.booked;
+            }
+        }
+
+        // Notação de Construtor
+        let hotel = new Object();
+        hotel.name = 'Park';
+        hotel.rooms = 120;
+        hotel.booked = 70;
+        hotel.checkAvailability = function() {
+            return this.rooms - this.booked;
+        }
+
+        // 
+        let name = document.getElementById('hotel');
+        let rooms = document.getElementById('rooms');
+        name.textContent = `Hotel Name: ${hotel.name}`;
+        rooms.textContent = `Rooms Available: ${hotel.checkAvailability()}`;
+
+    </script>
+</body>
+</html>
