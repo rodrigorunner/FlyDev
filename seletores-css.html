@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seletores</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 940px;
+            margin: 10px auto;
+            line-height: 1.5;
+        }
+
+        h1, h2 {
+            color: orchid;
+            text-align: center;
+        }
+        h2 {
+            color: red;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        #center {
+            text-align: center;
+        }
+
+        #center p {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        #center > p::first-letter {
+            color: blue;
+            font-family: serif;
+            font-size: 35px;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: blue;
+            margin: 10px auto;
+        }
+        li {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+       
+        li:nth-child(even) {
+            color: gray;
+        }
+        li:nth-child(odd) {
+            color: lightgray;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <h1>Selectors</h1>
+
+    <div id="center">
+        <h2>Title</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure saepe culpa aspernatur! Est qui impedit illum laborum ab, optio veritatis, cumque mollitia, quae deleniti exercitationem vitae ipsa id. Delectus, odit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel sequi inventore optio fuga itaque nihil nobis pariatur quis mollitia temporibus, recusandae dolorem vitae?</p>
+        <ul class="list">
+            <li>Orange</li>
+            <li>Red</li>
+            <li>Pink</li>
+            <li>Blue</li>
+            <li>Yellow</li>
+            <li>Green</li>
+        </ul>
+    </div>
 </body>
 </html>
